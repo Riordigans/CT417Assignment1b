@@ -5,6 +5,6 @@ jdk:
 build:
   ci:
     - mkdir -p shippable/testresults
-    - mvn install
+    - mvn install -DcreateChecksum=true
     - mvn test
     - cp -r target shippable/codecoverage
